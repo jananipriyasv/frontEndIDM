@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inhertiance</title>
+</head>
+<body>
+    <script>
+        class t1{
+            constructor(name){
+                this.name=name;
+            }
+            detail(){
+                console.log('Name is',this.name)
+            }
+        }
+
+        class t2 extends t1{
+            constructor(name,age){
+                super(name);
+                this.age=age
+            }
+            
+            task(){
+                console.log(`name is ${this.name} age is ${this.age}`)
+
+                
+            }
+        }
+        let b=new t2("erode",23)
+
+        b.task()
+        b.detail()
+    </script>
+</body>
+</html>

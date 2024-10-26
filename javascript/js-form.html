@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<style>
+    
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background:blue;
+    color:black;
+    display: flex;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+.form_box {
+    width: 450px;
+    background:white;
+    padding: 30px;
+    border-radius: 7px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.form_box input:not([type="submit"]),
+.form_box textarea,
+.form_box select {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin: 0 0 3px;
+    padding: 13px 15px;
+    font-size: 20px;
+    color: black;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid transparent;
+}
+ 
+*::-webkit-input-placeholder {
+    opacity: 1;
+    color: inherit;
+}
+ 
+.form_box textarea {
+    height: 100px;
+    resize: none;
+}
+ 
+.error {
+    font-weight: 700;
+    font-size: 14px;
+    color: red;
+    display: none;
+    margin-bottom: 13px;
+}
+.form_box input[type="submit"] {
+    padding: 10px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    background: blue;
+    margin: 0 auto;
+    display: block;
+}
+.form_box input[type="submit"]:hover {
+    background:black;
+}
+
+
+.valid {
+    border: 1px solid green;
+}
+
+</style>
+<body>
+    <div class="container">
+        <form name="custom_form" id="customForm" onsubmit="return FormValidation()">
+            <div class="form_box">
+                <h1>Registration Form</h1>
+                <input type="text" name="name" placeholder="Name*">
+                <span class="error">Please Enter Your Name</span>
+                
+                <input type="text" name="email" placeholder="Email*">
+                <span class="error">Please Enter Your Email</span>
+                
+                <input type="text" name="phone" placeholder="Phone*">
+                <span class="error">Please Enter Your Phone</span>
+                
+                <select name="subject">
+                    <option value="">Subject*</option>
+                    <option value="Design">Web Designer</option>
+                    <option value="Development">Frontend Developer</option>
+                    <option value="Marketing">Backend Developer</option>
+                </select>
+                <span class="error">Please Enter Your Subject</span>
+                
+                <input type="password" name="password" placeholder="Password*">
+                <span class="error">Please Enter Your Password</span>
+
+                <input type="password" name="confirmPassword" placeholder="Confirm Password*">
+                <span class="error">Passwords do not match</span>
+                
+                <input type="text" name="message" placeholder="Message*">
+                <span class="error">Please Enter Your Message</span>
+
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function FormValidation() {
+            var name = document.custom_form.name;
+            var email = document.custom_form.email;
+            var phone = document.custom_form.phone;
+            var subject = document.custom_form.subject;
+            var message = document.custom_form.message;
+            var password = document.custom_form.password;
+            var confirmPassword = document.custom_form.confirmPassword;
+            var isValid = true;
+
+        
+            var passwordRegex = /^(?=.[A-Z])(?=.[!@#$&])[A-Za-z\d!@#$&]{8,}$/;
+
+    
+            if (name.value.trim() === "") {
+                name.nextElementSibling.style.display = "block";
+                name.style.border = "1px solid #f00";
+                isValid = false;
+            } else {
+                name.nextElementSibling.style.display = "none";
+                name.style.border = "1px solid green";
+            }
+
+            
+            if (!email.value.match(/^([\w\.-]+)@([\w-]+\.)+[\w-]{2,4}$/)) {
+                email.nextElementSibling.style.display = "block";
+                email.style.border = "1px solid #f00";
+                isValid = false;
+            } else {
+                email.nextElementSibling.style.display = "none";
+                email.style.border = "1px solid green";
+            }
+
+            
+            if (!phone.value.match(/^[5-9][0-9]{9}$/)) {
+                phone.nextElementSibling.style.display = "block";
+                phone.style.border = "1px solid #f00";
+                isValid = false;
+            } else {
+                phone.nextElementSibling.style.display = "none";
+                phone.style.border = "1px solid green";
+            }
+
+        
+            if (subject.value === "") {
+                subject.nextElementSibling.style.display = "block";
+                subject.style.border = "1px solid #f00";
+                isValid = false;
+            } else {
+                subject.nextElementSibling.style.display = "none";
+                subject.style.border = "1px solid green";
+            }
+
+            
+            if (!password.value.match(passwordRegex)) {
+                password.nextElementSibling.style.display = "block";
+                password.style.border = "1px solid #f00";
+                isValid = false;
+            } else {
+                password.nextElementSibling.style.display = "none";
+                password.style.border = "1px solid green";
+            }
+
+            
+            if (confirmPassword.value !== password.value) {
+                confirmPassword.nextElementSibling.style.display = "block";
+                confirmPassword.style.border = "1px solid #f00";
+                isValid = false;
+            } else {
+                confirmPassword.nextElementSibling.style.display = "none";
+                confirmPassword.style.border = "1px solid green";
+            }
+
+            
+            if (message.value.trim() === "") {
+                message.nextElementSibling.style.display = "block";
+                message.style.border = "1px solid #f00";
+                isValid = false;
+            } else {
+                message.nextElementSibling.style.display = "none";
+                message.style.border = "1px solid green";
+            }
+
+            if (isValid) {
+                alert("Registration Successful!");
+            }
+
+            return isValid;
+        }
+
+        document.querySelectorAll('.form_box input, .form_box select').forEach(input => {
+            input.addEventListener('input', function () {
+                if (this.value !== "") {
+                    this.style.border = "1px solid green";  
+                    this.nextElementSibling.style.display = "none"; 
+                } else {
+                    this.style.border = "1px solid transparent";  
+                }
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>

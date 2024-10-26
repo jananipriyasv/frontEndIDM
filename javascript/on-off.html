@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.name{
+    border: 2px solid red ;
+    width: 30%;
+    height: 600px;
+    background-color: white;
+   
+}
+.active{
+    display: none;
+}
+.one{
+    position: absolute;
+    top: 170px;
+    left: 30px;
+    font-size: 30px;
+
+}
+#two{
+    position:absolute;
+    right: 100px;
+}
+#five{
+    display: none;
+    
+}
+
+</style>
+<body>
+    <img src="https://infomedia.com/wp-content/themes/kronos/assets/imgs/Infomedia-30th.svg" alt="" id="five">
+    <button onclick="demo()">&#9776</button id="two">
+    <div class="name">
+       
+    <h2 class="one">Services <br> <br>
+        Profolio <br> <br>
+        About <br> <br>
+        Resources <br> <br>
+        205.823.440 <br>
+    </h2>
+    </div>
+</body>
+<script>
+    let na=document.getElementsByClassName("name")
+    function demo(){
+        na[0].classList.toggle("active");
+        let nb=document.getElementById("five");
+        if(nb.style.display=="none"){
+        
+            nb.style.display="block";
+        }
+            else{
+                nb.style.display="none";
+
+            } 
+    }
+</script>
+</html>

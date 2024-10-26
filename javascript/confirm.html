@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to javascript</h1>
+    <button onclick="examprint()">print</button>
+    <button onclick="examOpen()">Open</button>
+    <button onclick="examclose()">close</button>
+    <script>
+        alert("my name is javascript")
+        let age=prompt("enter the age")
+        console.log(age);
+        let con=confirm("what is your name")
+        console.log(con);
+
+        function examPrint(){
+            window.print()
+        }
+        let url;
+
+        function examOpen(){
+            url=window.open("https://www.youtube.com/") 
+        }
+        function examclose(){
+            url.close()
+        }
+    </script>
+    </body>
+    </html> -->
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to JavaScript</h1>
+    <button onclick="examPrint()">Print</button>
+    <button onclick="examOpen()">Open</button>
+    <button onclick="examClose()">Close</button>
+    <script>
+        alert("My name is JavaScript");
+
+        let age = prompt("Enter your age");
+        console.log(age);
+
+        let con = confirm("Are you sure?");
+        console.log(con);
+
+        let url;
+
+        function examPrint() {
+            window.print();
+        }
+
+        function examOpen() {
+            url = window.open("https://www.w3schools.com/jsref/jsref_obj_math.asp");
+        }
+
+        function examClose() {
+            if (url && !url.closed) {
+                url.close();
+            } else {
+                alert("No window to close or window already closed.");
+            }
+        }
+    </script>
+</body>
+</html>

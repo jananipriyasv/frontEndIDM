@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Demo {
+            constructor(mail, age, city, place,language,name) {
+                this.user = mail;
+                this.userage = age;
+                this.city = city;
+                this.place = place;
+                this.language=language;
+                this.username=name;
+            }
+
+            task() {
+                console.log(`${this.user} is ${this.userage}`);
+            }
+            
+            t() {
+                console.log(`${this.city}, ${this.place}`);
+            }
+            quick(){
+                console.log(`${this.language},${this.username}`)
+            }
+        }
+
+        let a = new Demo("Janani@gmail.com", 20, "erode","thalavaipettai","Tamil&English","Janani");
+        a.task();
+        a.t();
+        a.quick();
+    </script>
+</body>
+</html>

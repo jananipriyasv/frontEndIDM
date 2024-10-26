@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+width: 150px;
+    color: #333;
+}
+
+.bold {
+    font-weight: bold;
+    color: #e60000;
+}
+.menu-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+} 
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #acaaaa;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    background-color: #e6dcdc;
+}
+.log{
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+main {
+    margin-left: 20px;
+    
+}
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+} 
+
+</style>
+<body>
+    <header>
+        <img class="logo" src="https://infomedia.com/wp-content/themes/kronos/assets/imgs/Infomedia-30th.svg" alt="">
+    
+         <!-- <button class="menu-btn" id="menuBtn">&#9776; </button> 
+         <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" disabled aria-label="Close"></button> -->
+
+
+
+         <button class="menu-btn" id="menuBtn">X</button>
+        <div class="container" id onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+    </header>
+    <nav id="sideNav" class="side-nav">
+        <img class="log" src="https://infomedia.com/wp-content/themes/kronos/assets/imgs/Infomedia-30th.svg" alt="">
+        <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
+        <a href="#">SERVICES</a>
+        <a href="#">PORTFOLIO</a>
+        <a href="#">ABOUT</a>
+        <a href="#">RESOURCES</a>
+        <a href="tel:205-823-4440">205.823.4440</a>
+        <a href="#">LET'S TALK</a>
+    </nav>
+    <min>
+        <!-- Main content goes here -->
+    </main>
+
+    <script >
+const menuBtn = document.getElementById("menuBtn");
+const sideNav = document.getElementById("sideNav");
+
+menuBtn.onclick = function() {
+    if (sideNav.style.width === "250px") {
+        sideNav.style.width = "0";
+        menuBtn.style.marginLeft="150px";
+        
+    } else {
+        sideNav.style.width = "250px";
+    }
+}
+
+// function myFunction(x) {
+//     x.classList.toggle("change");
+
+
+
+//   if (sideNav.style.width === "250px") {
+//         sideNav.style.width = "0";
+//     } else {
+//         sideNav.style.width = "250px";
+//     }
+// }
+ </script>
+</body>
+</html>

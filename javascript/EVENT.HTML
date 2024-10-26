@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="demo()" ondblclick="test()">
+        Click
+    </button>
+
+    <button id="btn"> Btn click</button>
+
+    <input type="text" placeholder="enter name" id="name">
+
+    <script>
+        function demo(){
+            console.log("hello")
+        }
+
+        function test(){
+            alert("please click onces")
+        }
+
+
+        let btn=document.getElementById("btn")
+
+        btn.addEventListener("dblclick",function(){
+            alert("event listerner working")
+        })
+
+        btn.addEventListener("mousedown",function(){
+            console.log("mouse down working")
+        })
+        btn.addEventListener("mouseup",function(){
+            console.log("mouse up working")
+        })
+        btn.addEventListener("mousemove",function(){
+            console.log("mouse mouse working")
+        })
+        btn.addEventListener("mouseover",function(){
+            console.log("mouse over working")
+        })
+        btn.addEventListener("mouseout",function(){
+            console.log("mouse out working")
+        })
+
+        let na=document.getElementById("name")
+
+        na.addEventListener("keydown",function(e){
+            console.log(e)
+            console.log(e.key)   
+        })
+
+        na.addEventListener("keyup",function(e){
+            console.log("keyup")
+        })
+
+        na.addEventListener("keypress",function(){
+            console.log("key press")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><span>demo</span><div id="demo"><h1>Welcome</h1><ol id="ol">
+            <li>HTML</li>
+            <li>CSS </li>
+        </ol>
+    </div><p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatibus tenetur odio repudiandae eum placeat! Facilis nesciunt sint tenetur vitae. Dignissimos ab, ullam fugiat autem earum assumenda perferendis quos libero!
+    </p>
+
+    <script>
+        let demo=document.getElementById("demo")
+        let parent=demo.parentNode
+
+        console.log(demo.previousSibling);
+        let ol=document.getElementById("ol")
+        console.log(ol.parentNode)  
+    </script>
+</body>
+</html>

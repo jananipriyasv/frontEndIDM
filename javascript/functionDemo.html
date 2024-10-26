@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    
+    <script>
+        let user="Erode"
+        function name(){
+            //code 
+            console.log(user)
+        }
+
+        function demo(){
+            let a=20;
+            console.log("function working")
+            console.log(user,"welcome",a)
+        }
+
+        demo();
+
+        function add(a,b){
+            console.log(a+b)
+        }
+
+        add(10,50);
+        add(-5,8);
+        name()
+
+        function minus(a,b){
+            console.log("before return keyword");
+            return a%b;
+        }
+
+        console.log(minus(1,5));
+
+        const test=()=>{
+            console.log("working")
+            name()
+        }
+
+        test()
+
+        const testing=(a,b)=>{
+            return a**b
+        }
+
+        console.log(testing(4,4));
+
+        let interval=setInterval(
+            function(){
+                console.log("set interval working done")
+                console.log(" ")
+            },3000
+        )
+
+        let out=setTimeout(
+            ()=>{
+                console.log("settimeout working")
+            },6000
+        )
+
+        clearInterval(interval);
+        clearTimeout(out)
+    </script>
+</body>
+</html>

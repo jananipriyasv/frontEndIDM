@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr id="first">
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+        <tr>
+          <td>Ernst Handel</td>
+          <td>Roland Mendel</td>
+          <td>Austria</td>
+        </tr>
+        <tr>
+          <td>Island Trading</td>
+          <td>Helen Bennett</td>
+          <td>UK</td>
+        </tr>
+        <tr>
+          <td>Laughing Bacchus Winecellars</td>
+          <td>Yoshi Tannamuri</td>
+          <td>Canada</td>
+        </tr>
+        <tr>
+          <td>Magazzini Alimentari Riuniti</td>
+          <td>Giovanni Rovelli</td>
+          <td>Italy</td>
+        </tr>
+      </table>
+
+      <a href="#first">FirstChild</a>
+
+      <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(2){
+            background-color: red;
+            color: white;
+        }
+
+        tr:last-child{
+            background-color: wheat;
+            text-decoration: overline;
+        }
+
+        :target{
+            font-size: x-large;
+            background-color: yellow;
+        }
+
+        p::first-letter{
+            font-size: xx-large;
+            font-weight: 900;
+        }
+        p::first-line{
+            background-color: yellow;
+        }
+
+        p::before{
+            content: "hello welcome";
+        }
+        p::after{
+            content: "thanks";
+        }
+      </style>
+
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo earum officiis nihil dolores voluptatibus aliquid excepturi sapiente impedit porro fuga iste aut quam, animi eum corrupti neque ullam. Natus inventore reiciendis rerum accusantium, explicabo incidunt error, perferendis non maxime cumque aliquid placeat quae provident enim porro, fugit necessitatibus consequatur? Eligendi illo labore inventore recusandae velit, excepturi doloremque explicabo commodi quidem adipisci veritatis minima. Commodi sequi deserunt nam harum, in aliquid labore totam reprehenderit quidem repellendus laudantium natus, pariatur sit quas accusantium reiciendis fugit atque expedita. Provident quam, nobis iste repellat voluptate perspiciatis numquam atque? Natus nisi cumque rerum hic quia.
+      </p>
+
+      <div>
+        <img src="../frontend.jpg" alt="">
+      </div>
+
+      <style>
+        @media screen and (max-width:700px) {
+            body{
+                background-color: aquamarine;
+            }
+        }
+        @media screen and (max-width:450px) {
+            p{
+                background-color: wheat;
+            }
+            img{
+                float: right;
+            }
+        }
+      </style>
+</body>
+</html>

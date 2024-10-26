@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class t1{
+            constructor(name){
+                this.name=name
+            }
+
+            demo(){
+                console.log("class t1 accessed",this.name)
+            }
+        }
+
+        class t2 extends t1{
+            constructor(name,age){
+                super(name)
+                this.age=age
+            }
+
+            demo(){
+                console.log("class t2 accessed",this.name,this.age)
+            }
+        }
+
+        let c=new t1("demo")
+        console.log(c)
+        let a=[
+            new t1("erode"),
+            new t2("Chennai",45) 
+        ]
+
+        a.forEach(item=>{
+            item.demo()
+            
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class demo{
+            constructor(name,age){
+                this.user=name;
+                this.userAge=age;
+            }
+
+            display(){
+                console.log(`${this.user} id name and age is ${this.userAge}`)
+            }
+        }
+
+        let a=new demo("Chennai",90);
+        a.display()
+
+        class test{
+            constructor(gmail){
+                this.mail=gmail
+            }
+
+        t1(){
+            console.log(this.mail)
+        }
+        }
+
+        let b=new test("yahoo%mail.com")
+        b.t1()
+    </script>
+</body>
+</html>

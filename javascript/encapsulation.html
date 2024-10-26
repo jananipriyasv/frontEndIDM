@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class bank{
+            constructor(name,bal,acc_type){
+                this.name=name;
+                this.bal=bal;
+                this.type=acc_type;
+            }
+
+            detail(){
+                console.log(`$user name ${this.name}-${this.type} balance ${this.bal}`)
+            }
+
+            deposit(amount){
+                this.bal+=amount;  // this.bal=this.bal+amount
+                console.log(`$user name ${this.name}-deposit amount ${amount} balance ${this.bal}`)
+            }
+
+            withdraw(amount){
+                if(amount>this.bal){
+                    console.log("no more amount")
+                }
+                else{
+                    this.bal-=amount   // this.bal=this.bal-amount
+                    console.log(`$user name ${this.name}-withrawal amount ${amount} balance ${this.bal}`)
+                }
+            }
+        }
+
+        let b=new bank("erode",20000,"FD")
+        b.deposit(2000)
+        b.withdraw(2500)
+
+        b.detail()
+    </script>
+</body>
+</html>

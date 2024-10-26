@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    
+    <h2>Welcome to BOM</h2>
+
+    <button onclick="demoPrint()">Print</button>
+
+    <br>
+    <button onclick="demoOpen()">Open</button>
+
+    <br>
+    <button onclick="demoClose()">close</button>
+    <script>
+        alert("hai this is alert box")
+        let age=prompt("enter age")
+        console.log(age);
+        let con=confirm("do you want close")
+        console.log(con);
+
+        function demoPrint(){
+            window.print()
+        }
+
+        let url;
+
+        function demoOpen(){
+            url=window.open("https://www.w3schools.com/js/js_datatypes.asp")
+        }
+
+        function demoClose(){
+            url.close()
+        }
+    </script>
+</body>
+</html>

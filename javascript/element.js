@@ -1,0 +1,10 @@
+let name=document.getElementById("name")
+let para=document.getElementById("para")
+let li=document.getElementsByClassName("test");
+name.innerHTML="hello world"
+li[0].innerHTML="Html"
+li[1].innerHTML="CSS"
+li[2].innerHTML="Bootstrap"
+let address=document.getElementsByTagName("address")
+address[0].innerHTML="erode"
+address[1].innerHTML="bhavani"

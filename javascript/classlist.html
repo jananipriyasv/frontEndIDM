@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            display: none;
+        }
+        .open{
+            display: inline;
+        }
+        .active{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="test()">
+        Open image
+    </button>
+
+    <button onclick="demo()">Close image</button>
+    <img src="https://cdn.vectorstock.com/i/1000v/70/44/3d-realistic-off-light-bulb-icon-closeup-vector-27407044.jpg" alt="" id="img">
+
+    <button onclick="toggleFunction()">
+        &#9776;
+    </button>
+    <ol id="list">
+        <li>Html</li>
+        <li>Css</li>
+        <li>Bootstrap</li>
+        <li>Javascript</li>
+
+    </ol>
+
+    <script>
+        let image=document.getElementById("img");
+
+        function test(){
+            image.classList.add("open")
+        }
+        function demo(){
+            image.classList.remove("open")
+        }
+        let list=document.getElementById("list")
+
+        function toggleFunction(){
+            list.classList.toggle("active")
+        }
+        
+
+    </script>
+</body>
+</html>

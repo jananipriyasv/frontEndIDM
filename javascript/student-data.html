@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Table</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>STUDENT DATA</h1>
+    <table id="studentTable">
+        <tr>
+            <th>NAME</th>
+            <th>MATHS</th>
+            <th>SCIENCE</th>
+            <th>PHYSICS</th>
+            <th>TOTAL</th> 
+        </tr>
+    </table>
+    <script>
+        const data = [
+            { name: "Ram", maths: 100, science: 80, physics: 89 },
+            { name: "Priya", maths: 50, science: 85, physics: 75 },
+            { name: "Kumar", maths: 70, science: 50, physics: 98 },
+            { name: "nithya", maths: 95, science: 65, physics: 70 },
+            { name: "nandhu", maths: 85, science: 88, physics: 79 },
+        ];
+        const table = document.getElementById('studentTable');
+        data.forEach(student => {
+            const totalMarks = student.maths + student.science + student.physics;
+            const row = `<tr>
+                            <td>${student.name}</td>
+                            <td>${student.maths}</td>
+                            <td>${student.science}</td>
+                            <td>${student.physics}</td>
+                            <td>${totalMarks}</td>
+                         </tr>`;
+            table.innerHTML += row;
+        });
+    </script>
+    </body>
+    </html>

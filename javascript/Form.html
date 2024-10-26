@@ -1,0 +1,83 @@
+[10:44 AM, 9/18/2024] Nandhini Idm: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<style>
+    
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background: #068abc;
+    color: #000;
+    display: flex;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+.form_box {
+    width: 450px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 7px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+h1 {
+    text-align: center;
+    margin-top…
+[11:19 AM, 9/18/2024] Nandhini Idm: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" placeholder="enter any one" id="name" name="usernmae" onchange="test()">
+        <input type="submit">
+        <input type="reset">
+    </form>
+
+    <script>
+        let form=document.getElementById("form");
+        let na=document.getElementById("name");
+
+        form.addEventListener("submit",function(e){
+            e.preventDefault()
+            if(name.value<=0){
+                alert("Plase enter name")
+            }
+            else{
+                console.log(name.value)
+            }
+        })
+
+        form.addEventListener("reset",()=>{
+            console.log("reset")
+        })
+
+       function test(){
+        console.log("change")
+       }
+
+       na.addEventListener("focus",()=>{
+        na.style.backgroundColor="red"
+       })
+       na.addEventListener("blur",()=>{
+        na.style.backgroundColor="green"
+       })
+    </script>
+</body>
+</html>

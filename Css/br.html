@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .one{
+        display: flex;
+        gap: 30px;
+        padding-left: 40px;
+    }
+    .zero{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: black;
+        align-items: center;
+        color: white;
+        width: 100%;
+        height: 80px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    p{
+        color: white;
+    }
+    .bar{
+        display: flex;
+    }
+    .menu{
+        display: none;
+    }
+
+    #down{
+        display: none;
+        position: absolute;
+        top:0;
+    }
+
+    #drop:hover #down{
+        display: inline;
+    }
+    .ten{
+        width: 50px;
+        height: 20px;
+        position: absolute;
+        top: 35px;
+        left: 550px;
+        display: none;
+    }
+    .eleven{
+        width: 5px;
+        height:15px;
+        position: absolute;
+        left: 785px;
+        top: 35px;
+        display: flex;
+        padding-inline-start: 32em;
+    }
+    .letter img{
+        width: 100%;
+    }
+    .flow{
+        position: absolute;
+        top: 600px;
+        color: white;
+        left: 600px;
+    }
+    .row{
+        position: absolute;
+        top: 650px;
+        color: white;
+        left: 520px;
+    }
+    .quick{
+        text-align: center;
+        letter-spacing: 6px;
+        font-weight: 700px;
+        padding-top: 60px;
+        padding-right: 15px;
+    }
+    .clear{
+        text-align: center;
+    }
+    .round p{
+        color: black;
+        display: flex;
+        justify-content: center;
+        line-height: 20px;
+    }
+     .child1 p{
+        color: black;
+        text-align: center;
+        
+    }
+    .child1 img{
+        width: 150px;
+    }
+    .child2 p{
+ color: black;
+ text-align: center;
+ }
+ .child2 img{
+    width: 150px;
+ }
+ .child3 p{
+    color: black;
+    text-align: center;
+ }
+ .child3 img{
+    width: 150px;
+ }
+ .parent{
+    display: flex;
+   justify-content: space-around;
+   margin-left: 300px;
+   margin-right: 300px;
+ }
+ .set{
+    background-color: black;
+    width: 100%;
+    height: 900px;
+ }
+ .sound {
+    text-align: center;
+    padding-top: 60px;
+    margin-top: 100px;
+    
+ }
+ .of{
+    width: 750px;
+    height: 150px;
+    background-color: white;
+    margin-left:250px ;
+    display: flex;
+ }
+ .end p{
+    color: black;
+    
+ }
+ .on p{
+    color: black;
+ }
+ .open p{
+    color: black;
+ }
+ .check img{
+    width: 250px;
+ }
+ .go img{
+    width:250px ;
+ }
+ .wel img{
+
+    width:250px ;
+ }
+ .no{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 30px;
+    gap: 20px;
+ }
+ .turn{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+ }
+ .coin{
+    width: 55px;
+    height: 35px;
+    background-color: orangered;
+    display: flex;
+    margin-left: 15px;
+ }
+ .you{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+ 
+ .cal{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+ }
+
+ 
+    @media screen and (max-width:600px) {
+        .six{
+            display: none;
+        }
+        .seven{
+            display: none;
+        }
+        .eight{
+            display: none;
+        }
+        .nine{
+            display: none;
+        }
+        .ten{
+           display: flex;
+        }
+        .eleven{
+            display: none;
+        }
+          
+    }
+    @media screen and (max-width:350px) { 
+        
+        .one a{
+            width: 100%;
+            font-size: 5px;
+        }
+        .parent{
+            width: 100%;
+            margin-left: 0px;
+        }
+        .child1 img{
+        width: 100px;
+    }
+    .child2 img{
+        width: 100px;
+    }
+    .child3 img{
+        width: 100px;
+    }
+
+    }
+    
+</style>
+<body>
+    <div class="zero">
+        <div class="one">
+            <a class="five">HOME</a>
+            <a class="six">BAND</a>
+            <a class="seven">TOUR</a>
+            <a class="eight">CONTECT</a>
+            <a class="nine" href="">MORE</a>
+        </div>
+          </div>
+            <div id="down">
+                <ul>
+                    <li>
+                        Merchandise
+                    </li>
+                    <li>
+                        Media
+                    </li>
+                    <li>
+                        Extra
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ten">
+               <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+            <div class="eleven">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCBhh59QNIm7SsAiaajQ2gtfNLrMoNws3Fg&s" alt="">
+            </div>
+        </div>
+        <div class="letter">
+            <img src="https://www.w3schools.com/w3images/la.jpg" alt="">
+        </div>
+        <div class="flow">
+            <h4>LOS ANGELES</h4>
+        </div>
+        <div class="row">
+            <p>
+                We had the best time playing at Venice Beach! 
+            </p>
+        </div>
+        <div class="quick">
+            <h3>THE BAND</h3>
+        </div>
+        <div class="clear">
+            <i>We love music</i>
+        </div>
+        <div class="round">
+            <p style="text-align: center !important;">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco<br> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum<br> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit <br>anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut <br>enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="parent">
+            <div class="child1">
+                <p>Name</p>
+                <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="">
+        
+            </div>
+                <div class="child2">
+                    <p>Name</p>
+                    <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="">
+            </div>
+            <div class="child3">
+                <p>Name</p>
+                <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="">
+            </div>
+        </div>
+        <div class="set">
+            <div class="sound">
+                <h1 style="color: white;">TOUR DATES</h1>
+                <p>Remember to book your tickets!</p>
+            </div>
+            <div class="start">
+                <div class="of">
+                <div class="end">
+                    <p>September</p>
+                </div>
+                <div class="coin">
+                    <p>Sold out</p>
+                  </div>
+            </div>
+                <div class="on">
+                    <p>October</p>
+                    
+                </div>
+                <div class="open">
+                    <p>
+                      November  
+                    </p>
+                </div>
+            </div>
+            <div class="no">
+                <div class="check">
+                    <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="">
+                    <div class="turn">
+                    </div>
+                </div>
+                <div class="go">
+                    <img src="https://www.w3schools.com/w3images/paris.jpg" alt="">
+                    <div class="you">
+
+                    </div>
+                </div>
+                <div class="wel">
+                    <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="">
+                    <div class="cal">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+ 
+    </div>
+</html>

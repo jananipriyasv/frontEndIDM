@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ifelse</title>
+</head>
+<body>
+    <script>
+        if(false){
+            //true block 
+            console.log("this is true block")
+        }else{
+            //false block
+            console.log("this is false block")
+        }
+        // else if statement
+        let na=prompt("enter age")
+        if(na >= 18){
+            console.log("senior")
+        }
+        else if(na<=5 ){
+            console.log("junior")
+        }
+        else{
+            console.log("invalid")
+        }
+
+        //nesting if statement
+        if(false){
+            console.log("welcome")
+            if(false){
+                console.log("nesting 1 true")
+            }
+            else{
+                console.log("nesting 1 false")
+            }
+        }
+        else{
+            console.log("out")
+            if(true){
+                console.log("false block 1")
+            }
+            else{
+                console.log("false block 2")
+            }
+        }
+
+
+        //switch statement
+
+        // switch (key) {
+        //     case value:
+                
+        //         break;
+        
+        //     default:
+        //         break;
+        // }
+        let age=-20;
+
+        switch(true){
+            case ((age >=1) && (age <=18)):
+                console.log("junior");
+                break;
+            case ((age >18) && (age<=50)):
+                console.log("senior");
+                break;
+            case ((age > 50 )&& (age < 100)):
+                console.log("super senior");
+                break;
+            default:
+                console.log("invalid entry")
+        }
+    </script>
+</body>
+</html>

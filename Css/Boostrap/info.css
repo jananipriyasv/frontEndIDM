@@ -1,0 +1,126 @@
+*{
+padding: 0;
+margin: 0;
+}
+    #header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .headerlink,li,a{
+        all:unset;
+        list-style: none;
+        padding:0px 10px 0px 10px;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+       
+    }
+    .button1{
+        background-color:#ee3440;
+        outline: 1px solid red;
+        border: none;
+        padding: 10px 20px 10px 20px;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+       
+    }
+    .video{
+        width: 100%;
+        height: auto;
+    position:absolute;
+    z-index: -1;
+    filter:brightness(70%);
+    }
+    .text{
+        font-family:freight-big-pro,serif;
+        font-size: 60px;
+    }
+    #para1{
+        padding-top: 15%;
+        position: sticky;
+        
+        
+    }
+    .content1{
+        position: relative;
+        padding-top: 50%;
+    }
+    #para2{
+       justify-content: center;
+       padding-left: 5%;
+    }
+    h2{
+        font-size: 50px;
+        font-weight: 400;
+        font-family: freight-big-pro,serif;
+        line-height: 1;
+        margin: 0 0 0.5em;
+        padding: 0.75rem 0 0;
+        letter-spacing: .01em;
+        
+    }
+    #img1{
+       padding-top: 14%;
+       padding-right:4%;
+       padding-left: 4%;
+       
+       
+    }
+    .text-button{
+        font-family: greycliff-cf,sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #00adb5;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+    }
+    #img2{
+        padding-left:4%;
+        padding-right:4%;
+        
+    }
+    .bg{
+        position: relative;
+        background-color:#fff;
+        max-width: 950px;
+        margin: -150px auto 0;
+        padding: 40px 80px;
+        text-align: center;
+        color: #313843;
+    }
+    .bg h2{
+        font-size: 50px;
+        font-weight: 400;
+        font-family: freight-big-pro,serif;
+        line-height: 1;
+        margin: 0 0 0.5em;
+        padding: 0.75rem 0 0;
+        letter-spacing: .01em;
+    }
+    .wrap{
+        padding: 75px 20px 220px;
+    }
+    
+    #bg-navy{
+        background-color: #313843;
+        height: 600px;
+        width: 100%;
+    
+    }
+    @media only screen and (min-width:768px){
+        .warp{
+            max-width: 2084px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .list-inline{
+        -webkit-font-smoothing: antialiased;
+        font-size: 20px;
+    }
+</body>
+</html>

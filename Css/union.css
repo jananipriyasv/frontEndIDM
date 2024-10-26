@@ -1,0 +1,12 @@
+div h1{
+    background-color: aqua;
+}
+div> h1{
+    color: rgb(red10, green10, blue20);
+}
+div~ h1{
+    color: greenyellow;
+}
+ol{
+    background-color: crimson;
+}

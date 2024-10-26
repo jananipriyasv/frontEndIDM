@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        *, *:after, *:before {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            background: blue;
+            color: black;
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form_box {
+            width: 450px;
+            background: white;
+            padding: 30px;
+            border-radius: 7px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+        
+        .form_box input:not([type="submit"]),
+        .form_box textarea,
+        .form_box select {
+            font-family: Arial, sans-serif;
+            width: 100%;
+            margin: 0 0 3px;
+            padding: 13px 15px;
+            font-size: 20px;
+            color: black;
+            border-radius: 5px;
+            background: white;
+            border: 1px solid transparent;
+        }
+        
+        .form_box .error {
+            font-weight: 700;
+            font-size: 14px;
+            color: red;
+            display: none;
+            margin-bottom: 13px;
+        }
+        
+        .form_box input[type="submit"] {
+            padding: 10px 50px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 0;
+            color: white;
+            background: blue;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .form_box input[type="submit"]:hover {
+            background: black;
+        }
+        
+        .valid {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form name="custom_form" id="customForm" onsubmit="return FormValidation()">
+            <div class="form_box">
+                <h1>Registration Form</h1>
+                <input type="text" name="name" placeholder="Name*" required>
+                <span class="error">Please Enter Your Name</span>
+                
+                <input type="email" name="email" placeholder="Email*" required>
+                <span class="error">Please Enter a Valid Email</span>
+                
+                <input type="text" name="phone" placeholder="Phone*" required>
+                <span class="error">Please Enter a Valid Phone</span>
+                
+                <select name="subject" required>
+                    <option value="">Subject*</option>
+                    <option value="Design">Web Designer</option>
+                    <option value="Development">Frontend Developer</option>
+                    <option value="Marketing">Backend Developer</option>
+                </select>
+                <span class="error">Please Select a Subject</span>
+                
+                <input type="password" name="password" placeholder="Password*" required>
+                <span class="error">Password must be at least 8 characters, include an uppercase letter and a special character.</span>
+
+                <input type="password" name="confirmPassword" placeholder="Confirm Password*" required>
+                <span class="error">Passwords do not match</span>
+                
+                <input type="text" name="message" placeholder="Message*" required>
+                <span class="error">Please Enter Your Message</span>
+
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function FormValidation() {
+            var name = document.custom_form.name;
+            var email = document.custom_form.email;
+            var phone = document.custom_form.phone;
+            var subject = document.custom_form.subject;
+            var message = document.custom_form.message;
+            var password = document.custom_form.password;
+            var confirmPassword = document.custom_form.confirmPassword;
+            var isValid = true;
+
+            var passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$&*])[A-Za-z\d!@#$&*]{8,}$/;
+
+            if (name.value.trim() === "") {
+                showError(name);
+                isValid = false;
+            } else {
+                hideError(name);
+            }
+
+            if (!email.value.match(/^([\w\.-]+)@([\w-]+\.)+[\w-]{2,4}$/)) {
+                showError(email);
+                isValid = false;
+            } else {
+                hideError(email);
+            }
+
+            if (!phone.value.match(/^[5-9][0-9]{9}$/)) {
+                showError(phone);
+                isValid = false;
+            } else {
+                hideError(phone);
+            }
+
+            if (subject.value === "") {
+                showError(subject);
+                isValid = false;
+            } else {
+                hideError(subject);
+            }
+
+            if (!password.value.match(passwordRegex)) {
+                showError(password);
+                isValid = false;
+            } else {
+                hideError(password);
+            }
+
+            if (confirmPassword.value !== password.value) {
+                showError(confirmPassword);
+                isValid = false;
+            } else {
+                hideError(confirmPassword);
+            }
+
+            if (message.value.trim() === "") {
+                showError(message);
+                isValid = false;
+            } else {
+                hideError(message);
+            }
+
+            if (isValid) {
+                alert("Registration Successful!");
+            }
+
+            return isValid;
+        }
+
+        function showError(input) {
+            input.nextElementSibling.style.display = "block";
+            input.style.border = "1px solid #f00";
+        }
+
+        function hideError(input) {
+            input.nextElementSibling.style.display = "none";
+            input.style.border = "1px solid green";
+        }
+
+        document.querySelectorAll('.form_box input, .form_box select').forEach(input => {
+            input.addEventListener('input', function () {
+                if (this.value !== "") {
+                    this.style.border = "1px solid green";  
+                    this.nextElementSibling.style.display = "none"; 
+                } else {
+                    this.style.border = "1px solid transparent";  
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+

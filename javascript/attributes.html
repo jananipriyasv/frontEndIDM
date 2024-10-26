@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clsName{
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <form action="index.php" id="form">
+        <input type="text" placeholder="enter name" id="name">
+    </form>
+    <button onclick="test()">Click</button>
+
+    <script>
+        let form=document.getElementById("form")
+
+        let demo=form.getAttribute("action")
+        console.log(demo)
+
+        let na=document.getElementById("name");
+
+        na.setAttribute("disabled","true");
+
+        form.style.backgroundColor="red";
+
+        function test(){
+            document.body.classList.add("clsName")
+        }
+    </script>
+</body>
+</html>

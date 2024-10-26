@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <script>
+        let a=[1,4,7,0,"demo"]
+        console.log(a);
+        let b=["demo","test"]
+        console.log(b);
+
+        let c=[2,4,"erode",true,5n,56.445];
+        console.log(c);
+
+        console.log(a[2]);
+        console.log(a.indexOf("demo"));
+        console.log(a.length);
+        console.log(a.includes("de"));
+        console.log(a.concat(b))
+
+        a[4]="true";
+        console.log(a);
+
+        //adding value in array
+        //push
+        let d=b.push("thanks")
+        //unshift
+        let e=b.unshift("welcome")
+        //splice
+        let f=b.splice(1,0,"mid terms")
+        console.log(b)
+        //remove value in array
+        //pop
+        let g=c.pop()
+        //shift
+        let h=c.shift()
+        //splice
+        let i=c.splice(1,2)
+        console.log(c);
+
+
+        //multidimensional array;
+        let z=[
+            ["test","demo",
+                [4n,"5n"]
+            ],
+            3,
+            3
+        ]
+
+        console.log(z[0][2][0])
+
+    </script>
+</body>
+</html>
+</body>
+</html>

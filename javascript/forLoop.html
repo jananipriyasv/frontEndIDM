@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop</title>
+</head>
+<body>
+    <script>
+        for(let i=0;i<=3;i++){
+            console.log(i);
+            for(let j=0;j<i;j++){
+                console.log("demo",j)
+            }
+        }
+
+        for(let i=5;i>=0;i--){
+            console.log("decrement",i);
+            // console.log("before break keyword")
+
+            // break;
+            // console.log("after break keyword")
+
+            if(i==3){
+                break
+            }
+        }
+
+        //while entry controlled loop
+        let a=0;
+        while(a<=2){
+            console.log("a value",a)
+            a++
+        }
+        //do while =>exit control loop
+        let b=0
+        do{
+            console.log("b value ",b)
+            b++
+            console.log(" b is",b)
+        }while(b>2)
+    </script>
+</body>
+</html>
